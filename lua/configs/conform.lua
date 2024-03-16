@@ -4,6 +4,11 @@ local options = {
   formatters_by_ft = {
     lua = { "stylua" },
   },
+
+  python = {
+    "ruff_fix",
+    "ruff_format",
+  },
 }
 
 require("conform").setup(options)
