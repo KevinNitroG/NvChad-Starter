@@ -1,5 +1,4 @@
 local plugin = {
-
   {
     "neovim/nvim-lspconfig",
     config = function()
@@ -7,7 +6,5 @@ local plugin = {
       require "configs.lspconfig"
     end,
   }
-
 }
-
 return plugin
