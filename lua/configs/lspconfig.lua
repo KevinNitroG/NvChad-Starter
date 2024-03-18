@@ -10,6 +10,8 @@ local servers = {
   -- "ruff_lsp",
   "pyright",
   "clangd",
+  "eslint",
+  "tsserver",
 }
 
 for _, lsp in ipairs(servers) do
