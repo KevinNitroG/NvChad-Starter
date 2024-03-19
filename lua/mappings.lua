@@ -39,6 +39,7 @@ map("v", "<A-k", ":m '<-2<CR>gv=gv")
 
 map("n", "<leader>db", "<cmd> DapToggleBreakpoint <CR>", { desc = "Add breakpoint at line" })
 map("n", "<leader>dr", "<cmd> DapContinue <CR>", { desc = "Start or continue the debugger" })
+map("n", "<leader>dt", "<cmd> DapUiToogle <CR>", { desc = "Toggle debugger UI" })
 
 -- user - term runner
 map({ "n", "i" }, "<F5>", function()
