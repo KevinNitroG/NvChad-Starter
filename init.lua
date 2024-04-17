@@ -11,7 +11,11 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-local lazy_config = require "configs.lazy"
+local lazy_config = vim.tbl_deep_extend("force", require "configs.lazy", {
+  ui = {
+    border = "rounded",
+  },
+})
 
 -- load plugins
 require("lazy").setup({
@@ -37,3 +41,8 @@ require "nvchad.autocmds"
 vim.schedule(function()
   require "mappings"
 end)
+
+require "autocmds"
+
+-- user
+vim.g.os_type = require "configs.get-os"
