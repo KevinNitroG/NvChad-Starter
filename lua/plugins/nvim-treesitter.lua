@@ -63,7 +63,7 @@ return {
   {
     -- from LazyVim: https://www.lazyvim.org/plugins/treesitter#nvim-treesitter-context
     "nvim-treesitter/nvim-treesitter-context",
-    event = "BufReadPre",
+    event = "BufRead",
     opts = { mode = "cursor", max_lines = 3 },
     keys = {
       {
@@ -83,7 +83,7 @@ return {
     --   { "i", mode = { "x", "o" } },
     -- },
     dependencies = { "nvim-treesitter/nvim-treesitter-textobjects" },
-    event = "BufReadPre",
+    event = "BufRead",
     opts = function()
       local ai = require "mini.ai"
       return {
