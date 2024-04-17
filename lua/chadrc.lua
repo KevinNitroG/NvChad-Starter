@@ -66,6 +66,7 @@ M.base46 = {
     "bufferline",
     "codeactionmenu",
     "whichkey",
+    "nvimtree",
   },
 }
 
