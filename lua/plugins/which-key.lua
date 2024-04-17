@@ -4,7 +4,7 @@ return {
     opts = {
       plugins = {
         spelling = {
-          enable = false,
+          enable = true,
         },
       },
       window = {
@@ -13,22 +13,30 @@ return {
       layout = {
         align = "left",
       },
-      defaults = {
-        ["<leader>c"] = { name = "+code" },
-        ["<leader>f"] = { name = "+file" },
-        ["<leader>g"] = { name = "+git" },
-        ["<leader>l"] = { name = "+LSP" },
-        ["<leader>m"] = { name = "+mark" },
-        ["<leader>p"] = { name = "+pick" },
-        ["<leader>r"] = { name = "+rename/relative" },
-        ["<leader>s"] = { name = "+search" },
-        ["<leader>t"] = { name = "+theme" },
-        ["<leader>u"] = { name = "+ui" },
-        ["<leader>w"] = { name = "+whichkey/workspace" },
-      },
     },
     init = function()
       dofile(vim.g.base46_cache .. "whichkey")
+    end,
+    config = function(_, opts)
+      local wk = require "which-key"
+      wk.setup(opts)
+      wk.register {
+        ["<leader>"] = {
+          c = { name = "+Code" },
+          f = { name = "+File" },
+          g = { name = "+Git" },
+          l = { name = "+lSP" },
+          m = { name = "+Mark" },
+          N = { name = "+Noice" },
+          p = { name = "+Pick" },
+          r = { name = "+Rename / Relative" },
+          s = { name = "+Search" },
+          t = { name = "+Theme" },
+          T = { name = "+Trouble" },
+          u = { name = "+UI" },
+          w = { name = "+Whichkey / Workspace" },
+        },
+      }
     end,
   },
 }
