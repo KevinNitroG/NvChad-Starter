@@ -19,6 +19,7 @@ o.sidescrolloff = 5
 o.cursorline = false
 o.fixendofline = false
 o.signcolumn = "yes"
+o.fileformats = "unix,dos"
 -- o.colorcolumn = "80"
 
 -- Taken from https://github.com/craftzdog/dotfiles-public/blob/master/.config/nvim/lua/config/options.lua

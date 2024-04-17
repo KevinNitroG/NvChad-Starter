@@ -6,9 +6,37 @@ require "nvchad.mappings"
 local nomap = vim.keymap.del
 
 nomap("n", "<C-n>")
+nomap("n", "<leader>n")
+nomap("n", "<leader>rn")
+nomap("n", "<leader>ch")
+nomap("n", "<leader>fm")
+nomap("n", "<leader>fo")
+nomap("n", "<leader>lf")
+nomap("n", "<leader>ma")
+nomap("n", "<leader>cm")
+nomap("n", "<leader>gt")
+nomap("n", "<leader>th")
+nomap("n", "<leader>wk")
+nomap("n", "<leader>wK")
+nomap("n", "<leader>/")
+nomap("n", "<leader>:")
+nomap("n", "<tab>")
+nomap("n", "<S-tab>")
 
 local map = vim.keymap.set
 
+-- remap nvchad
+
+-- Go previous / next buffer
+map("n", "L", function()
+  require("nvchad.tabufline").next()
+end, { desc = "Buffer Goto next" })
+
+map("n", "H", function()
+  require("nvchad.tabufline").prev()
+end, { desc = "Buffer Goto prev" })
+
+-- toggle NvimTree esiser
 map("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Nvimtree Toggle window" })
 
 -- map("n", ";", ":", { desc = "CMD enter command mode" })
@@ -51,7 +79,7 @@ map("v", "<", "<gv")
 map("v", ">", ">gv")
 
 -- lazy
-map("n", "<leader>L", "<cmd>Lazy<cr>", { desc = "Lazy" })
+map("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Lazy" })
 
 -- NVCHAD TERM
 

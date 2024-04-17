@@ -22,19 +22,33 @@ return {
       wk.setup(opts)
       wk.register {
         ["<leader>"] = {
-          c = { name = "+Code" },
+          c = {
+            name = "+Code",
+            d = { vim.diagnostic.open_float, "Lsp floating diagnostics" },
+            f = {
+              function()
+                require("conform").format { lsp_fallback = true }
+              end,
+              "Conform Format",
+            },
+          },
           f = { name = "+File" },
           g = { name = "+Git" },
-          l = { name = "+lSP" },
-          m = { name = "+Mark" },
-          N = { name = "+Noice" },
+          n = { name = "+Noice" },
           p = { name = "+Pick" },
-          r = { name = "+Rename / Relative" },
+          r = { name = "+Rename / Reset" },
           s = { name = "+Search" },
-          t = { name = "+Theme" },
-          T = { name = "+Trouble" },
-          u = { name = "+UI" },
-          w = { name = "+Whichkey / Workspace" },
+          S = { name = "+Spectre" },
+          u = {
+            name = "+UI",
+            C = { "<cmd>NvCheatsheet<CR>", "Toggle NvCheatsheet" },
+            l = { "<cmd>set nu!<CR>", "Toggle Line Number" },
+            r = { "<cmd>set rnu!<CR>", "Toggle Relative Number" },
+            t = { "<cmd>Telescope themes<CR>", "NvChad Themes" },
+            w = { "<cmd>set wrap!<CR>", "Toggle Wrap" },
+          },
+          w = { name = "+Workspace" },
+          z = { name = "+Zen" },
         },
       }
     end,

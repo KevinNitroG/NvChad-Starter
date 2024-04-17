@@ -4,9 +4,9 @@ return {
     event = "VeryLazy",
     keys = {
       {
-        "<leader>uh",
+        "<leader>uc",
         ":CloakToggle<CR>",
-        desc = "Toogle cloak",
+        desc = "Cloak Toggle",
       },
     },
     opts = {

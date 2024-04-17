@@ -34,6 +34,14 @@ M.ui = {
       "██║  ██╗███████╗ ╚████╔╝ ██║██║ ╚═╝ ██║",
       "╚═╝  ╚═╝╚══════╝  ╚═══╝  ╚═╝╚═╝     ╚═╝",
     },
+    buttons = {
+      { "  Find File", "Spc f f", "Telescope find_files" },
+      { "󰈚  Old Files", "Spc f o", "Telescope oldfiles" },
+      { "󰈭  Find Word", "Spc f w", "Telescope live_grep" },
+      { "  Bookmarks", "Spc s m", "Telescope marks" },
+      { "  Themes", "Spc u t", "Telescope themes" },
+      { "  Mappings", "Spc u C", "NvCheatsheet" },
+    },
   },
 
   lsp = { signature = true },
