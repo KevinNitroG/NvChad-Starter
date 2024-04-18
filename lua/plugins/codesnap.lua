@@ -1,6 +1,6 @@
 return {
   "mistricky/codesnap.nvim",
-  enabled = false and vim.g.os_type == "Linux",
+  enabled = false and not vim.g.is_windows,
   build = "make",
   -- build = "make build_generator",
   version = "^1",

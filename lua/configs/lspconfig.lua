@@ -4,7 +4,7 @@ local servers = {
   html = {},
   marksman = {},
   eslint = {},
-  clangd = {},
+  clangd = { capabilities = { offsetEncoding = { "utf-16" } } },
   jsonls = {},
   powershell_es = {
     cmd = {
@@ -33,7 +33,7 @@ local servers = {
 for name, opts in pairs(servers) do
   opts.on_init = configs.on_init
   opts.on_attach = configs.on_attach
-  opts.capabilities = configs.capabilities
+  opts.capabilities = vim.tbl_deep_extend("force", configs.capabilities, opts.capabilities or {})
 
   require("lspconfig")[name].setup(opts)
 end

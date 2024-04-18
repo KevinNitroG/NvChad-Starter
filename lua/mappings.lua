@@ -20,8 +20,8 @@ nomap("n", "<leader>wk")
 nomap("n", "<leader>wK")
 nomap("n", "<leader>/")
 nomap("n", "<leader>:")
-nomap("n", "<tab>")
-nomap("n", "<S-tab>")
+-- nomap("n", "<tab>")
+-- nomap("n", "<S-tab>")
 
 local map = vim.keymap.set
 

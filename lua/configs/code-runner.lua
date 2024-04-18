@@ -3,7 +3,6 @@ local M = {}
 M.get_cmd = function()
   local file = vim.fn.expand "%"
   local file_no_ext = vim.fn.expand "%:r"
-  local os_type = vim.g.os_type or require "configs.get-os"
 
   local cmds = {
     windows = {
@@ -25,13 +24,10 @@ M.get_cmd = function()
     },
   }
 
-  if os_type == "windows" then
+  if vim.g.is_windows then
     return cmds.windows[vim.bo.filetype]
   end
-  if os_type == "linux" then
-    return cmds.linux[vim.bo.filetype]
-  end
-  return 'echo "No cmd for current OS"'
+  return cmds.linux[vim.bo.filetype]
 end
 
 return M

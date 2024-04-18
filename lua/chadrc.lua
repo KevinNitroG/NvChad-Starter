@@ -13,6 +13,12 @@ M.ui = {
     ["@comment"] = { italic = true },
   },
 
+  cmp = {
+    icons = true,
+    lspkind_text = true,
+    style = "default", -- default/flat_light/flat_dark/atom/atom_colored
+  },
+
   telescope = { style = "bordered" },
 
   statusline = {
@@ -21,6 +27,14 @@ M.ui = {
     -- round and block will work for minimal theme only
     separator_style = "default",
     order = nil,
+    modules = nil,
+  },
+
+  -- lazyload it when there are 1+ buffers
+  tabufline = {
+    enabled = true,
+    lazyload = true,
+    order = { "treeOffset", "buffers", "tabs", "btns" },
     modules = nil,
   },
 

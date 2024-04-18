@@ -3,7 +3,8 @@ require "nvchad.options"
 -- add yours here!
 
 local o = vim.o
-o.cursorlineopt = "both" -- to enable cursorline!
+-- o.cursorlineopt = "both" -- to enable cursorline!
+o.cursorline = true
 o.relativenumber = true
 o.wrap = true
 o.breakindent = true
@@ -16,7 +17,6 @@ o.smartcase = true
 o.expandtab = true
 o.scrolloff = 5
 o.sidescrolloff = 5
-o.cursorline = false
 o.fixendofline = false
 o.signcolumn = "yes"
 o.fileformats = "unix,dos"
@@ -37,8 +37,8 @@ vim.bo.softtabstop = 4
 o.winblend = 0
 o.pumblend = 0 -- It can help nvim cmp to transparent background
 
--- set global variable to declare os type
-vim.g.os_type = require "configs.get-os"
+-- -- set global variable to declare os type
+-- vim.g.os_type = require "configs.get-os"
 
 -- border for diagnostic
 vim.diagnostic.config {

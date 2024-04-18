@@ -38,6 +38,7 @@ return {
     "neovim/nvim-lspconfig",
     init = function()
       require("lspconfig.ui.windows").default_options.border = "rounded"
+      dofile(vim.g.base46_cache .. "lsp")
     end,
     config = function()
       require("nvchad.configs.lspconfig").defaults()

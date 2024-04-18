@@ -1,7 +1,7 @@
 return {
   {
     "christoomey/vim-tmux-navigator",
-    enabled = false and vim.g.os_type == "Linux",
+    enabled = false and not vim.g.is_windows,
     cmd = {
       "TmuxNavigateLeft",
       "TmuxNavigateDown",

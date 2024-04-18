@@ -1,7 +1,7 @@
 return {
   {
     "nvim-pack/nvim-spectre",
-    event = "VeryLazy",
+    cmd = { "Spectre" },
     keys = {
       { "<leader>Ss", '<cmd>lua require("spectre").toggle()<CR>', desc = "Toggle Spectre" },
       {

@@ -1,5 +1,6 @@
 vim.g.base46_cache = vim.fn.stdpath "data" .. "/nvchad/base46/"
 vim.g.mapleader = " "
+vim.g.is_windows = vim.fn.has "win32" ~= 0
 
 -- bootstrap lazy and all plugins
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
@@ -43,6 +44,3 @@ vim.schedule(function()
 end)
 
 require "autocmds"
-
--- user
-vim.g.os_type = require "configs.get-os"

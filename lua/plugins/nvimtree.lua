@@ -6,6 +6,7 @@ return {
     end,
     opts = {
       view = {
+        number = true,
         relativenumber = true,
         width = 40,
       },
